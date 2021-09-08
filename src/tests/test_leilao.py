@@ -42,13 +42,13 @@ class TestLeilao(TestCase):
     def test_deve_retornar_o_maior_e_o_menor_valor_quando_o_leilao_tiver_tres_lances(self):
         denys = Usuario('Denys', 500.0)
         lance_do_denys = Lance(denys, 100.0)
-        vini = Usuario('Vini', 500.0)
+        artur = Usuario('Artur', 500.0)
 
-        lance_do_vini = Lance(vini, 200.0)
+        lance_do_artur = Lance(artur, 200.0)
 
         self.leilao.propoe(lance_do_denys)
         self.leilao.propoe(self.lance_do_carla)
-        self.leilao.propoe(lance_do_vini)
+        self.leilao.propoe(lance_do_artur)
 
         menor_valor_esperado = 100.0
         maior_valor_esperado = 200.0
